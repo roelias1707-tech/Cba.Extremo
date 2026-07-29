@@ -1,0 +1,13 @@
+// 1. Utilities
+@import 'utilities/variables';
+
+// 2. Components
+@import 'components/header';
+@import 'components/footer';
+
+// 3. Pages
+@import 'pages/home';
+@import 'pages/actividades';
+@import 'pages/gastronomia';
+@import 'pages/turismo';
+@import 'pages/contacto';

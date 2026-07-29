@@ -1,0 +1,858 @@
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: font-family: "Ranchers", sans-serif;
+
+}
+
+/*--- Aqui Agrego el body ---*/
+body {
+    background-color:#111821; /*csi negro, muy moderno */
+    color: white; 
+    
+}
+
+/* ----- font---------+/
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&family=Unkempt:wght@400;700&display=swap');
+/*----------------=========== ESTILO HEADER=========== ---------------*/
+
+
+.header-fijo {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #9c4406;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px; 40px;
+    z-index: 1000;
+    border-bottom: 1px solidcolor #333;
+    
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.nombre-marca {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
+}
+
+/* ------------- MENU NAVEGACION-------- */
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.navegacion ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.navegacion ul il a:hover {
+    color:#111821
+}
+
+
+/* --------------====== HERO SECCION (IMAGEN- FILTRO OSCURO)=====-------- */
+
+.hero {
+    height: 85vh;
+    /* Para cambiar la foto, poné la ruta real en url('../img/tu-foto.jpg') */
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+                url(../img/paseo.buen.pastor.1.jpg) center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 70px;        
+    
+}
+
+.hero-contenido h1{
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 25 px;
+    line-height: 1.2;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #9c4406;
+    color: #ffffff;
+    padding: 12px 32px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+
+}
+
+.btn-cta:hover {
+    background-color: #ff6600;
+    transform: scale(1.05);
+}
+
+/* seccion tarjeta gris (Que es CbaExtremo)*/
+.seccion-info {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #1a1d22;
+}
+
+.tarjeta-gris {
+    background-color: #282c34;
+    border-radius: 16px;
+    padding: 50px 40px;
+    max-width: 750px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+}
+
+.tarjeta-gris h2 {
+    color: #9c4406;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.tarjeta-gris p {
+    color: #d1d5db;
+    font-size: 1.05rem;
+    line-height: 1.6;
+
+}
+
+/* --------------===== ESTILO TURISMO Y TARJETAS (BOOTSTRAP)====== -------- */
+.card-custom {
+    background-color: #111821 !important;
+    border: 1px solid #2d3238 !important;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(255, 102, 0, 0.2);
+}
+
+/* formato para que las imagenes de banner no se deformen */
+.img-banner-fixed {
+    height: 320px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.img-card-fixed {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* colores para los textos y botones */
+.text-orange {
+    color: #ff6600 !important;
+}
+
+.text-light-gray {
+    color: #cccccc !important;
+}
+
+.btn-orange {
+    background-color: ;
+    color: #ffffff !important;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-orange:hover {
+    background-color: #e05500 !important;
+}
+
+
+/* --------------===== ESTILO TURISMO Y TARJETAS (BOOTSTRAP)====== -------- */
+
+.contenedor-experiencia {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.titulo-experiencia {
+    text-align: center;
+    color: #ffffff !important;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: #9c4406;
+}
+
+/* Grilla principal */
+.grid-experiencia {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr; 
+    grid-template-rows: minmax(180px, auto) minmax(200px, auto); /* Fila 1 y Fila 2 */grid-template-rows: auto auto;  
+    gap: 25px 30px; /* espacio entre filas y columnas */
+    align-items: center;
+}
+
+/* Imagen grande izquierda (ocupa las 2 filas de la izquierda) */
+.bloque-img-izq {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    height: 100%;
+}
+
+.bloque-img-izq img {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* texto superior (columna derecha, fila 1) */
+.texto-superior {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    align-self: center;
+}
+
+.texto-superior p {
+    color: #cccccc;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+    
+}
+
+/* texto inferior (columna izquierda del bloque derecho) */
+.texto-inferior {
+    grid-column: 2 / 3 ;
+    grid-row: 2 / 3;
+    align-self: center;
+}
+
+.texto-inferior p {
+    color: #cccccc;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+
+}
+
+/* 4. Imagen Derecha (Abajo a la derecha: Columna 3, Fila 2) */
+.bloque-img-der {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    width: 100%;
+}
+
+.bloque-img-der img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/* --------------===== PAGINA CONTACTO====== -------- */
+
+.seccion-experiencia-usuario {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 110px 20px;
+}
+
+/* Seleccon superior (2 solumnas) --- */
+.seccion-experiencia-usuario {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.titulo-contacto {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.descripcion-contacto {
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/*formulario e inputs */
+
+.formulario-comentarios {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grupo-input {
+    display: flex;
+    gap: 10px;
+}
+
+.grupo-input input,
+.caja-comentario textarea {
+    width: 100%;
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 12px 15px;
+    color: #ffffff;
+    font-family: "Ranchers", sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background-color: #ff6600;
+    color: #ffffff;
+}
+
+/*Imagen derecha */
+
+.columna-imagen-contacto img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Seccion inferior (mapa) */
+
+.seccion-mapa {
+    max-width: 1200px;
+    margin: 40px auto 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.titulo-mapa {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitulo-mapa {
+    color: #cccccc;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.contenedor-iframe-mapa {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* --------------===== PAGINA ACTIVIDADES- CARRUSEL====== -------- */
+
+.conteiner-carrusel {
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/*imagenes carrusel */
+
+.img-carrusel {
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Fondo traslucido para el texto encima de las fotos del carrusel */
+
+.fondo-caption {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 15px 25px;
+    border-radius: 10px;
+    backdrop-filter: blur (4px);
+}
+
+.fondo-caption h5 {
+    color: #9c4406;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/*Estilos de las tarjetas (seccion 2) */
+
+.tarjeta-actividad {
+    background-color: #121212 !important;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.tarjeta-actividad:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 102, 0, 0.2);
+}
+
+.tarjeta-actividad img {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+
+
+/* --------------===== FOOTER====== -------- */
+/* Estilos para los iconos de redes */
+footer {
+    background-color: #121417; /* El fondo oscuro de tu web */
+    color: #ffffff;
+    padding: 30px 20px 20px;
+    width: 100%;
+}
+
+.footer-contenido {
+    display: flex;
+    flex-direction: column;    /* Alinea título, íconos y copyright de arriba a abajo */
+    align-items: center;       /* Centra todo en el medio del ancho */
+    justify-content: center;
+    gap: 15px;                 /* Espaciado parejo entre cada bloque */
+    text-align: center;
+}
+
+.titulo-redes {
+    font-size: 0.95rem;
+    color: #cccccc;
+    margin: 0;
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.iconos-redes a {
+    color: #9c4406; /* Naranja de cba-x  de los logos */
+    font-size: 2.2rem; /* Tamaño idéntico a tu referencia */
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+/* Efecto hover suave al pasar el mouse */
+.iconos-redes a:hover {
+    color: #ff8533;
+    transform: scale(1.1);
+}
+
+/* Texto del Copyright */
+.copyright {
+    font-size: 0.8rem;
+    color: #888888;
+    margin-top: 10px;
+}
+
+
+
+
+
+/* ==========================================
+   RESPONSIVE DESIGN (Media Queries) INDEX
+   ========================================== */
+
+/* 1. TABLETS (Solo de 481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .header-fijo {
+        position: relative;
+        height: auto;
+        flex-direction: column;
+        padding: 15px 10px;
+        gap: 12px;
+    }
+
+    .navegacion ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+}
+
+/* 2. CELULARES (De 0px a 480px) */
+@media (max-width: 480px) {
+    .header-fijo {
+        position: relative;
+        padding: 10px 0 12px !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        background-color: #9c4406 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .logo-cx {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 0.85rem !important;
+    }
+
+    .nombre-marca {
+        font-size: none;
+    }
+
+    .navegacion {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .navegacion ul {
+        display: flex !important;
+        justify-content: space-evenly !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 4px !important;
+        margin: 0 !important;
+        list-style: none !important;
+        gap: 0 !important;
+    }
+
+    .navegacion li {
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+
+    .navegacion a {
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        white-space: nowrap !important;
+        letter-spacing: -0.3px !important;
+        padding: 2px 0 !important;
+    }
+
+    .navegacion a:hover,
+    .navegacion a:active {
+        color: #d9531e !important;
+    }
+}
+
+
+/* ==========================================
+   6. RESPONSIVE TURISMO 
+   ========================================== */
+
+/* TABLETS (pantallas de hasta 768px) */
+@media (max-width: 768px) {
+    /* Ajuste de contenedor general */
+    main.container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Reducimos un poco la altura de los banners */
+    .img-banner-fixed {
+        height: 250px;
+    }
+
+    /* Ajuste de títulos de sección */
+    .seccion-turismo h2 {
+        font-size: 1.4rem !important;
+    }
+}
+
+/* CELULARES (pantallas de hasta 480px) */
+@media (max-width: 480px) {
+    /* Reducimos espacios superiores e inferiores */
+    main.container {
+        margin-top: 1.5rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    /* Títulos e íconos adaptados a pantallas chicas */
+    .seccion-turismo h2 {
+        font-size: 1.2rem !important;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .seccion-turismo p {
+        font-size: 0.85rem;
+    }
+
+    /* Banners de las tarjetas en celulares */
+    .img-banner-fixed {
+        height: 180px; /* Un alto proporcionado para la pantalla del celular */
+    }
+
+    /* Padding interno de las tarjetas */
+    .card-custom .card-body {
+        padding: 1rem;
+    }
+
+    .card-custom .card-title {
+        font-size: 1.1rem !important;
+    }
+
+    .card-custom .card-text {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
+
+/* ==========================================
+   GASTRONOMÍA RESPONSIVE (TABLETS Y CELULARES)
+   ========================================== */
+
+/* --- TABLETS (Desde 481px hasta 768px) --- */
+@media (max-width: 768px) {
+    .seccion-experiencia {
+        padding: 30px 20px;
+    }
+
+    .titulo-experiencia {
+        font-size: 1.8rem;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    /* En tablet puse a 1 columna para que no se aprieten las imágenes */
+    .grid-experiencia {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bloque-img-izq,
+    .bloque-img-der {
+        width: 100%;
+    }
+
+    .bloque-img-izq img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .bloque-img-der img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .texto-superior p,
+    .texto-inferior p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+
+/* --- CELULARES (Hasta 480px) --- */
+@media (max-width: 480px) {
+    .seccion-experiencia {
+        padding: 20px 15px;
+    }
+
+    .titulo-experiencia {
+        font-size: 1.4rem;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-underline-offset: 6px;
+    }
+
+    .grid-experiencia {
+        gap: 15px;
+    }
+
+    .bloque-img-izq img {
+        height: 240px; /* Tamaño controlado para pantallas chicas */
+    }
+
+    .bloque-img-der img {
+        height: 200px;
+    }
+
+    .texto-superior p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .texto-inferior p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
+
+
+/* ==========================================
+   CONTACTO RESPONSIVE (TABLETS Y CELULARES)
+   ========================================== */
+
+   /* TABLETS (Hasta 768px) ---- */
+   @media (max-width: 768px) {
+    .contenedor-contacto {
+        padding: 30px 20px 20px 20px;
+    }
+
+    /* bloquee principal a una columna */
+    .seccion-experiencia-usuario {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .titulo-contacto {
+        font-size: 1.8rem;
+    }
+
+    /* Apilamos nombre y email para que no queden apretados */
+
+    .grupo-input {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .columna-imagen-contacto img {
+        height: 300px;
+    }
+
+    .seccion-mapa {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .contenedor-iframe-mapa iframe {
+        height: 300px;
+    }
+
+ }
+
+    /* ---- CELULARES (HASTA 480)---- */
+
+    @media (max-width: 480px) {
+    .contenedor-contacto {
+        padding: 20px 15px;
+    }
+
+    .titulo-contacto {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .descripcion-contacto {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    /* Boton ancho completo para que sea comodo al tacto */
+
+    .boton-enviar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .columna-imagen-contacto img {
+        height: 220px;
+    }
+
+    .titulo-mapa {
+        font-size: 1.4rem;
+    }
+
+    .subtitulo-mapa {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    .contenedor-iframe-mapa iframe {
+        height: 250px;
+    }
+  
+  }
+
+  /* ==========================================
+   ACTIVIDADES RESPONSIVE (BOOTSTRAP ADAPTADO)
+   ========================================== */
+
+/* --- TABLETS (Hasta 768px) --- */
+@media (max-width: 768px) {
+    .img-carrusel {
+        height: 300px; /* Reducimos la altura para que no ocupe tanto espacio vertical */
+    }
+    
+    .fondo-caption h5 {
+        font-size: 1.1rem;
+    }
+    
+    .fondo-caption p {
+        font-size: 0.85rem;
+        margin-bottom: 0;
+    }
+}
+
+/* --- CELULARES (Hasta 480px) --- */
+@media (max-width: 480px) {
+    .img-carrusel {
+        height: 220px; /* Altura ideal y compacta para celular */
+    }
+
+    /* Opcional: si querés que el texto del carrusel se lea en celular sin tapar la foto */
+    .fondo-caption {
+        padding: 6px 10px;
+    }
+
+    .seccion-grilla-actividades {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+ }

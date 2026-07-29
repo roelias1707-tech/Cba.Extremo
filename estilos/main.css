@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/* --- VARIABLES GLOBALES --- */
+/* --- ENCABEZADO Y NAVEGACIÓN --- */
+.header-fijo {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #903c00;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-contenedor .logo {
+  height: 40px;
+  width: auto;
+}
+.logo-contenedor .nombre-marca {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.navegacion ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+.navegacion ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navegacion ul li a:hover {
+  color: #ff6600;
+}
+
+@media (max-width: 768px) {
+  .header-fijo {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .navegacion ul {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+}
+/* --- PIE DE PÁGINA --- */
+footer {
+  background-color: #0d1117;
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: auto;
+}
+footer .footer-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+footer .footer-contenido .redes-sociales {
+  display: flex;
+  gap: 15px;
+}
+footer .footer-contenido .redes-sociales a {
+  color: #ffffff;
+  font-size: 1.4rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+footer .footer-contenido .redes-sociales a:hover {
+  color: #ff6600;
+  transform: translateY(-3px);
+}
+footer .footer-contenido p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+/* --- INICIO (HOME) --- */
+.hero-banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+}
+.hero-banner .hero-titulo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+.hero-banner .hero-subtitulo {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+.hero-banner .btn-principal {
+  background-color: #ff6600;
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.hero-banner .btn-principal:hover {
+  background-color: rgb(204, 81.6, 0);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 60px 15px;
+  }
+  .hero-banner .hero-titulo {
+    font-size: 1.8rem;
+  }
+  .hero-banner .hero-subtitulo {
+    font-size: 1rem;
+  }
+}
+/* --- ACTIVIDADES Y CARRUSEL --- */
+.img-carrusel {
+  height: 450px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.container-carrusel {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .img-carrusel {
+    height: 300px;
+  }
+  .fondo-caption h5 {
+    font-size: 1.1rem;
+  }
+  .fondo-caption p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 480px) {
+  .img-carrusel {
+    height: 220px;
+  }
+  .fondo-caption {
+    padding: 6px 10px;
+  }
+  .seccion-grilla-actividades {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+/* --- GALERÍA / TURISMO --- */
+.seccion-galeria {
+  padding: 40px 20px;
+}
+.seccion-galeria .titulo-seccion {
+  text-align: center;
+  color: #ff6600;
+  margin-bottom: 30px;
+}
+.seccion-galeria .grilla-fotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.seccion-galeria .grilla-fotos .tarjeta-foto {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+.seccion-galeria .grilla-fotos .tarjeta-foto img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.seccion-galeria .grilla-fotos .tarjeta-foto img:hover {
+  transform: scale(1.08);
+}
+
+/* --- MAPA Y CONTACTO --- */
+@media (max-width: 768px) {
+  .titulo-mapa {
+    font-size: 1.4rem;
+  }
+  .subtitulo-mapa {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+  .contenedor-iframe-mapa iframe {
+    height: 250px;
+  }
+}/*# sourceMappingURL=main.css.map */
