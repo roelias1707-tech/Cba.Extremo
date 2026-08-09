@@ -1,0 +1,130 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+
+
+.hero {
+  height: 85vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+              url('../img/paseo.buen.pastor.1.jpg') center/cover no-repeat;
+  @include m.flex-center;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    color: v.$text-white;
+
+    @include m.respond-to(mobile) {
+      font-size: 2rem;
+    }
+  }
+
+  .btn-cta {
+    display: inline-block;
+    background-color: v.$color-primary;
+    color: v.$text-white;
+    padding: 12px 32px;
+    border-radius: v.$radius-full;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color v.$transition-normal, transform v.$transition-fast;
+
+    &:hover {
+      background-color: v.$color-primary-hover;
+      color: v.$text-white;
+      transform: scale(1.05);
+    }
+  }
+}
+
+.seccion-info {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: v.$bg-section;
+
+  .tarjeta-gris {
+    background-color: v.$bg-card;
+    border-radius: v.$radius-lg;
+    padding: 50px 40px;
+    max-width: 750px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+    h2 {
+      color: v.$color-primary;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+
+      @include m.respond-to(mobile) {
+        font-size: 1.4rem;
+      }
+    }
+
+    p {
+      color: v.$text-light-gray;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    @include m.respond-to(mobile) {
+      padding: 30px 20px;
+    }
+  }
+}
+
+.card-custom {
+  background-color: v.$bg-card !important;
+  border: 1px solid v.$border-dark !important;
+  border-radius: v.$radius-md;
+  overflow: hidden;
+  @include m.hover-lift;
+
+  &:hover {
+    box-shadow: 0 8px 20px rgba(156, 68, 6, 0.25);
+  }
+
+  .img-card-fixed {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .btn-orange {
+    background-color: v.$color-primary;
+    color: v.$text-white !important;
+    border: none;
+    font-weight: 600;
+
+    &:hover {
+      background-color: v.$color-primary-hover !important;
+    }
+  }
+}
+
+.img-banner-fixed {
+  height: 350px;
+  object-fit: cover;
+  width: 100%;
+
+  @include m.respond-to(tablet) {
+    height: 250px;
+  }
+
+  @include m.respond-to(mobile-xs) {
+    height: 180px;
+  }
+}
+
+.text-orange {
+  color: v.$color-primary-hover !important;
+}
+
+.text-light-gray {
+  color: v.$text-gray !important;
+}

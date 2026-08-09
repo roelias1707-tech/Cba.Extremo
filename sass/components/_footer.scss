@@ -1,0 +1,45 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+footer {
+  background-color: v.$bg-footer;
+  color: v.$text-white;
+  padding: 30px 20px 20px;
+  width: 100%;
+
+  .footer-contenido {
+    @include m.flex-center;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .titulo-redes {
+    font-size: 0.95rem;
+    color: v.$text-gray;
+    margin: 0;
+  }
+
+  .iconos-redes {
+    @include m.flex-center;
+    gap: 20px;
+
+    a {
+      color: v.$color-primary;
+      font-size: 2.2rem;
+      transition: transform v.$transition-normal, color v.$transition-normal;
+      text-decoration: none;
+
+      &:hover {
+        color: v.$color-primary-light;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+    color: v.$text-muted;
+    margin-top: 10px;
+  }
+}

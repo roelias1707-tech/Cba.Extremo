@@ -1,0 +1,160 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+
+.seccion-experiencia-usuario {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  padding: 120px 20px 0 20px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 35px;
+  align-items: center;
+
+  @include m.respond-to(desktop-sm) {
+    grid-template-columns: 1fr;
+    padding-top: 90px;
+    gap: 30px;
+  }
+
+  .titulo-contacto {
+    color: v.$text-white;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+
+    @include m.respond-to(desktop-sm) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .descripcion-contacto {
+    color: v.$text-gray;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .formulario-comentarios {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .grupo-input {
+      display: flex;
+      gap: 15px;
+
+      @include m.respond-to(mobile) {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      input {
+        width: 100%;
+        background-color: v.$bg-input;
+        border: 1px solid v.$border-dark;
+        border-radius: v.$radius-sm;
+        padding: 12px 15px;
+        color: v.$text-white;
+        font-family: inherit;
+        font-size: 0.95rem;
+        outline: none;
+        transition: border-color v.$transition-normal;
+
+        &:focus {
+          border-color: v.$color-primary;
+        }
+      }
+    }
+
+    .caja-comentario {
+      textarea {
+        width: 100%;
+        background-color: v.$bg-input;
+        border: 1px solid v.$border-dark;
+        border-radius: v.$radius-sm;
+        padding: 12px 15px;
+        color: v.$text-white;
+        font-family: inherit;
+        font-size: 0.95rem;
+        outline: none;
+        transition: border-color v.$transition-normal;
+
+        &:focus {
+          border-color: v.$color-primary;
+        }
+      }
+    }
+
+    .boton-enviar {
+      background-color: v.$color-primary;
+      color: v.$text-white;
+      border: none;
+      border-radius: v.$radius-sm;
+      padding: 12px 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color v.$transition-normal;
+      align-self: flex-start;
+
+      &:hover {
+        background-color: v.$color-primary-hover;
+        color: v.$text-white;
+      }
+
+      @include m.respond-to(mobile) {
+        width: 100%;
+      }
+    }
+  }
+
+  .columna-imagen-contacto {
+    img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: v.$radius-md;
+
+      @include m.respond-to(desktop-sm) {
+        height: 300px;
+      }
+
+      @include m.respond-to(mobile) {
+        height: 220px;
+      }
+    }
+  }
+}
+
+.seccion-mapa {
+  max-width: 1200px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+  text-align: center;
+
+  .titulo-mapa {
+    color: v.$text-white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .subtitulo-mapa {
+    color: v.$text-gray;
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .contenedor-iframe-mapa {
+    width: 100%;
+    border-radius: v.$radius-lg;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
+    iframe {
+      @include m.respond-to(mobile) {
+        height: 260px;
+      }
+    }
+  }
+}

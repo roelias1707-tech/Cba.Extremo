@@ -1,0 +1,17 @@
+// npx sass --watch sass/main.scss styles/style.css
+
+// 1. Utilities (Variables y Mixins)
+@use 'utilities/variables' as v;
+@use 'utilities/mixins' as m;
+@use 'utilities/reset';
+
+// 2. Components
+@use 'components/header';
+@use 'components/footer';
+
+// 3. Pages
+@use 'pages/home';
+@use 'pages/actividades';
+@use 'pages/contacto';
+@use 'pages/gastronomia';
+@use 'pages/turismo';

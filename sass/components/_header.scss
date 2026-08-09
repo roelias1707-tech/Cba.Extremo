@@ -1,0 +1,67 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+// Placeholder para Extend (%nav-link-base)
+%nav-link-base {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 8px;
+  transition: color v.$transition-fast;
+}
+
+.header-fijo {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  .navbar {
+    background-color: v.$color-primary !important;
+    border-bottom: 1px solid v.$border-dark;
+    padding: 10px 20px;
+
+    .logo {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .nombre-marca {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: v.$text-white;
+    }
+
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .navbar-collapse {
+      @include m.respond-to(desktop-sm) {
+        background-color: v.$color-primary;
+        padding: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 10px;
+      }
+    }
+
+    .navbar-nav {
+      .nav-link {
+        @extend %nav-link-base;
+        color: v.$text-white;
+
+        &:hover,
+        &.active {
+          color: v.$text-dark !important;
+        }
+
+        @include m.respond-to(desktop-sm) {
+          padding: 10px 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

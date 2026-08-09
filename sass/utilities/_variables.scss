@@ -1,0 +1,37 @@
+// ==========================================
+// VARIABLES GLOBALES
+// ==========================================
+
+// Colores Principales
+$color-primary: #9c4406;
+$color-primary-hover: #ff6600;
+$color-primary-light: #ff8533;
+
+// Colores de Fondo
+$bg-main: #111821;
+$bg-card: #282c34;
+$bg-section: #1a1d22;
+$bg-dark: #121212;
+$bg-footer: #121417;
+$bg-input: #1a1a1a;
+
+// Colores de Texto
+$text-white: #ffffff;
+$text-gray: #cccccc;
+$text-light-gray: #d1d5db;
+$text-dark: #111821;
+$text-muted: #888888;
+
+// Tipografía y Fuentes
+$font-main: "Ranchers", cursive, sans-serif;
+
+// Bordes y Sombra
+$border-dark: #333333;
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-full: 25px;
+
+// Transiciones
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;

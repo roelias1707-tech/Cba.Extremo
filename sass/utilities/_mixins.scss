@@ -1,0 +1,37 @@
+@use 'variables' as v;
+
+
+// 1. Mixin con parámetro obligatorio (Media Queries)
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == desktop-sm {
+    @media (max-width: 991px) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 768px) { @content; }
+  } @else if $breakpoint == mobile {
+    @media (max-width: 576px) { @content; }
+  } @else if $breakpoint == mobile-xs {
+    @media (max-width: 480px) { @content; }
+  }
+}
+
+// 2. Mixin con parámetros y valores por defecto (Flexbox configurable)
+@mixin flex-layout($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// Shortcut para mantener compatibilidad con lo existente
+@mixin flex-center {
+  @include flex-layout(center, center, row);
+}
+
+// 3. Mixin con parámetro personalizable para elevación
+@mixin hover-lift($distancia: -5px) {
+  transition: transform v.$transition-normal, box-shadow v.$transition-normal;
+
+  &:hover {
+    transform: translateY($distancia);
+  }
+}
