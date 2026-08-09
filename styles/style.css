@@ -3,17 +3,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Unkempt", sans-serif; /* Tipografía general para el texto */
 }
 
 body {
   background-color: #111821;
   color: #ffffff;
+  font-family: "Poppins", sans-serif; /* Tipografía general para el texto */
   padding-top: 76px; /* Espacio obligatorio para header fijo */
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Ranchers", sans-serif; /* Tipografía especial para los títulos */
 }
 
 .header-fijo .navbar .navbar-nav .nav-link {
@@ -53,8 +49,11 @@ h1, h2, h3, h4, h5, h6 {
   .header-fijo .navbar .navbar-collapse {
     background-color: #9c4406;
     padding: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 10px;
+  }
+  .header-fijo .navbar .nav-link {
+    text-align: center;
+    padding: 8px 0;
   }
 }
 .header-fijo .navbar .navbar-nav .nav-link {
@@ -62,12 +61,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header-fijo .navbar .navbar-nav .nav-link:hover, .header-fijo .navbar .navbar-nav .nav-link.active {
   color: #111821 !important;
-}
-@media (max-width: 991px) {
-  .header-fijo .navbar .navbar-nav .nav-link {
-    padding: 10px 0;
-    text-align: center;
-  }
 }
 
 footer {

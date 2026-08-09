@@ -29,8 +29,9 @@
     }
 
     .nombre-marca {
+      font-family: v.$font-titulos; /* Aplica la fuente Ranchers de tus variables */
       font-weight: bold;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       color: v.$text-white;
     }
 
@@ -38,12 +39,16 @@
       border-color: rgba(255, 255, 255, 0.5);
     }
 
-    .navbar-collapse {
-      @include m.respond-to(desktop-sm) {
+    /* Uso de tu Mixin para responsive */
+    @include m.respond-to(desktop-sm) {
+      .navbar-collapse {
         background-color: v.$color-primary;
         padding: 15px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
         margin-top: 10px;
+      }
+      .nav-link {
+        text-align: center;
+        padding: 8px 0;
       }
     }
 
@@ -55,11 +60,6 @@
         &:hover,
         &.active {
           color: v.$text-dark !important;
-        }
-
-        @include m.respond-to(desktop-sm) {
-          padding: 10px 0;
-          text-align: center;
         }
       }
     }

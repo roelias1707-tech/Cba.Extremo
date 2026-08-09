@@ -1,18 +1,16 @@
-@use 'variables' as *;
+@use 'variables' as v;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $font-cuerpo; /* Tipografía general para el texto */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #111821;
-    color: #ffffff; 
-    padding-top: 76px; /* Espacio obligatorio para header fijo */
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-titulos; /* Tipografía especial para los títulos */
+  background-color: v.$bg-main;
+  color: v.$text-white;
+  font-family: v.$font-cuerpo;
+  padding-top: 76px;
 }
