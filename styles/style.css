@@ -1,14 +1,19 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Ranchers", cursive, sans-serif;
+  font-family: "Unkempt", sans-serif; /* Tipografía general para el texto */
 }
 
 body {
   background-color: #111821;
   color: #ffffff;
   padding-top: 76px; /* Espacio obligatorio para header fijo */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ranchers", sans-serif; /* Tipografía especial para los títulos */
 }
 
 .header-fijo .navbar .navbar-nav .nav-link {
